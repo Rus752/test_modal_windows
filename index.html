@@ -5,30 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Тест для клиники</title>
+    <title>Модальное окно.</title>
 </head>
 
 <body>
     <div class="form">
-        <span class="close"><img src="img/X.svg" alt="Закрывающий элемент."></span>
-        
+        <button class="close">X</button>
         <h1>Заполните заявку на консультацию.</h1>
         <p class="header_message">Наш специалист свяжется с Вами и ответит на любые вопросы.</p>
         <form action="">
             <div class="input_wrap">
                 <input type="text" class="input_name font_message" name="name" placeholder="Имя" required>
-                <input type="tel" class="input_telephone font_message" name="tel" placeholder="Телефон" required>
+                <input type="tel" class="input_telephone font_message" name="tel"
+                    pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" placeholder="Телефон" required>
             </div>
-
             <textarea name="" id="message" class="font_message" cols="30" rows="10"
                 placeholder="Напишите, какой у Вас вопрос? "></textarea>
             <div class="footer_wrap">
-                <button><span>Получить консультацию.</span></button>
+                <button class="button_click"><span>Получить консультацию.</span></button>
                 <p class="form_footer"><span>Я соглашаюсь на</span> оброботку персональных данных.</p>
             </div>
         </form>
 
     </div>
+    <div class="overlay"></div>
+    </div>
+    </div>
+
+
 </body>
 
 </html>
